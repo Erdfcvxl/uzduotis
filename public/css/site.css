@@ -1,0 +1,226 @@
+/*--- Layout---*/
+.panel {
+    background-color: #f1f1f1;
+    border-radius: 0;
+}
+
+.loader {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    right: 0;
+    padding: 0 -15px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 280px;
+    background-color: rgba(255, 255, 255, 0.64)
+}
+
+
+
+/*--- Text styles ---*/
+h5 {
+    line-height: 0.1em;
+    background-image: linear-gradient(to right, #000 10%, rgba(255, 255, 255, 0) 30%);
+    background-position: top;
+    background-size: 5px 1px;
+    background-repeat: repeat-x;
+}
+
+h5::after,
+h5::before{
+    line-height: 1em;
+}
+
+h5 span,
+h5 a {
+    background-color: #f1f1f1;
+    padding-right: 15px !important;
+    color: black;
+}
+
+h5 a:hover,
+h5 a:active,
+h5 a:focus {
+    color: #3b3b3b;
+    text-decoration: none;
+}
+
+
+/*--- Sidebar ---*/
+.sidebar {
+    text-align: center;
+    padding: 10px 0;
+}
+.filter-group {
+    padding: 15px 0;
+}
+
+.filter-group .group {
+    padding: 15px 0;
+}
+
+.filter-group label {
+    color: #808080;
+    padding-bottom: 3px;
+    display: inline-block;
+    font-weight: 300;
+}
+.group {
+    min-height: 1em;
+}
+.group .collapse,
+.group a:not(.collapsed),
+.group .collapsed,
+.group .collapsing {
+    padding: 0 0px 0 15px;
+    text-align: left;
+}
+
+.panel-body {
+    padding: 20px 7px 15px 0px;
+}
+
+
+/*--- Checkbox ---*/
+.filter-group input[type="checkbox"] {
+    display:none;
+}
+
+.filter-group input[type="checkbox"] + label span {
+    display:inline-block;
+    width:21px;
+    height:21px;
+    background:url(../img/checkSheet.png) left top no-repeat;
+    cursor:pointer;
+    margin: 0px 5px 0 0;
+    vertical-align: middle;
+}
+
+
+input[type="checkbox"]:checked + label span {
+    background:url(../img/checkSheet.png) -21px top no-repeat;
+}
+
+
+/*--- Glyphs ---*/
+.caret {
+    -webkit-transition: width 2s;
+    transition: width 2s;
+}
+
+.gly-rotate-0 {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+    -webkit-transform: rotate(0deg) ;
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transition: 0.1s ease-in-out;
+}
+.gly-rotate-270 {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    transition: 0.1s ease-in-out;
+}
+
+
+
+/*--- Right filters ---*/
+#filters-top{
+    margin-bottom: 15px;
+}
+
+#filters-top .panel {
+    padding: 33px 15px 23px;
+}
+
+#filters-top h1{
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+#filters-top .col-md-5ths {
+    border-right: 1px solid black;
+}
+
+#filters-top .col-md-5ths:last-child {
+    border-right: none;
+}
+
+#filters-top .col-md-5ths a {
+    display: block;
+    color: black;
+    padding: 12px 0;
+}
+
+#filters-top .col-md-5ths a:first-child,
+#filters-top .col-md-5ths a:last-child {
+    padding: 0;
+}
+
+
+/*--- 5 columns  ---*/
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 20px;
+}
+
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+
+/*--- Items ---*/
+.items {
+    margin-left: -30px;
+}
+
+.items .col-md-3 {
+    padding: 0 0 15px 15px;
+    margin-bottom: 25px;
+}
+
+.items .col-md-3 p {
+    color: #4d4d4d;
+    font-size: 12px;
+}
+
+#results {
+    padding-left: 15px;
+    position: relative;
+}
